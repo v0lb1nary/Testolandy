@@ -7,7 +7,7 @@
 
 import time
 
-t = (2021, 12, 28, 8, 44, 4, 4, 362, 0)
+t = (2021, 12, 28, 8, 44, 4, 4, 0, 0)
 
 invent_time = time.mktime(t)
 print("Time inventado:", invent_time)
@@ -22,7 +22,8 @@ time_start_string = time.strftime("%d/%m/%Y, %H:%M", named_tuple)
 
 print("COMEÇOU EM: ",time_start_string)
 
-seconds_add = (18*60)
+x = int(input("Minutos: "))
+seconds_add = (x*60)
 
 named_tuple1 = time.localtime((seconds+seconds_add)) # get struct_time
 time_end_string = time.strftime("%d/%m/%Y, %H:%M", named_tuple1)
